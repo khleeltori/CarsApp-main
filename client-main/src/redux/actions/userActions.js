@@ -1,11 +1,11 @@
-import axios from 'axios';
+import axios from './../../configration/axiosInstance';
 import {message} from 'antd'
 
 export const userLogin=(reqObj)=>async dispatch=>{
     dispatch({type:'LOADING', payload:true})
 
     try {
-        const response = await axios.post('/api/users/login',reqObj)
+        const response = await axios.post('/users/login',reqObj)
         localStorage.setItem('user' , JSON.stringify(response.data))
         message.success('Login success')
         dispatch({type:'LOADING', payload:false})
@@ -28,7 +28,7 @@ export const userRegister=(reqObj)=>async dispatch=>{
     dispatch({type:'LOADING', payload:true})
 
     try {
-        axios.post('/api/users/register',reqObj) // const response 
+        axios.post('/users/register',reqObj) // const response 
         message.success('Registertion success')
         setTimeout(() => {
             window.location.href = '/login'

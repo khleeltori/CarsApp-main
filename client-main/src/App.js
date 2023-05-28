@@ -1,5 +1,5 @@
 import  './App.css';
-import {BrowserRouter,Routes,Route} from 'react-router-dom';
+import {BrowserRouter,Routes,Route,Navigate} from 'react-router-dom';
 import Home from './pages/Home.js';
 import Login from './pages/Login.js';
 import Register from './pages/Register.js';
@@ -25,3 +25,15 @@ function App() {
 }
 
 export default App;
+
+// export function protectedRoute(props)
+// {
+//   if (localStorage.getItem('user'))
+//   {
+//     return <Route {...props} />
+//   }
+//   else{
+//     return <Navigate to="/login" />
+//   }
+  
+// }
