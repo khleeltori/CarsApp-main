@@ -4,7 +4,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Poppins', sans-serif !important;
-  background-color: azure;
+  background-color: rgb(27, 19, 33);
 }
 
 code {
@@ -12,7 +12,7 @@ code {
     monospace;
 }
 .ds1{
-  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  box-shadow: rgba(141, 45, 45, 0.12) 0px 2px 4px 0px, rgba(207, 61, 90, 0.32) 0px 2px 16px 0px;
 }
 .spinner{
   position:absolute;
@@ -30,12 +30,13 @@ p{
   text-align: left;
   padding: 0;
 }
+
 .btn1{
   box-shadow: none !important;
   background-color: white !important;
   color: orangered !important;
   border: 1px solid orangered !important;
-  padding: 5px 15px !important;
+  padding: 5px 10px !important;
   outline: none !important;
 }
 .btn1:focus{
@@ -60,19 +61,20 @@ min-width: 90vh;
 }
 .car{
   border-radius: 5px;
-  margin-top: 100px;
-  height: 120px;
+  margin-top: 120px;
+  height: 100px;
   transition: 0.3s;
 }
 .car :hover{
-  height:120px;
+  height:160px;
 }
 .car:hover > .car-content{
   opacity: 1;
   transform: translateY(-40px);
+  justify-content: center;
 }
 .carimg{
-  height: 180px;
+  height: 165px;
   width: auto;
   border-radius:5px;
   transform: translateY(-50px);
@@ -82,6 +84,7 @@ min-width: 90vh;
   transform: translateX(-200px);
   opacity: 0;
   transition:0.3s ;
+  color: blue;
 }
 .login{
   background-color: black;

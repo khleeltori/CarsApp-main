@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Dropdown, Space, Row, Col } from 'antd';
+import { Button, Dropdown, Row, Col } from 'antd';
 
 function DefaultLayout(props) {
   const user = JSON.parse(localStorage.getItem('user'));

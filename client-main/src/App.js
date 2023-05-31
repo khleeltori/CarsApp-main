@@ -17,7 +17,7 @@ function App() {
           <Route path='/' element={<Home/>} />
           <Route path='/login' element={<Login/>} />
           <Route path='/register' element={<Register/>} />
-          <Route path='/bookingCar' element={<BookingCar/>} />
+          <Route path='/booking/:carid' element={<BookingCar/>} />
         </Routes>
       </BrowserRouter>
     </div>
@@ -26,14 +26,14 @@ function App() {
 
 export default App;
 
-// export function protectedRoute(props)
-// {
-//   if (localStorage.getItem('user'))
-//   {
-//     return <Route {...props} />
-//   }
-//   else{
-//     return <Navigate to="/login" />
-//   }
+export function protectedRoute(props)
+{
+  if (localStorage.getItem('user'))
+  {
+    return <Route {...props} />
+  }
+  else{
+    return <Navigate to="/login" />
+  }
   
-// }
+}
