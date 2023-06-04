@@ -29,15 +29,11 @@ function Home() {
           <div className='car p-2 bs1'>
             <img src={car.image} className="carimg"  />
 
-            <div className="car-content d-flex align-items-center justify-content-between'">
-
-              <div>
+            <div className="car-content">
                 <p>{car.name}</p>
-                <p>{car.rentPerHour} Rent Per Hour /-</p>
-              </div>
-
+                <p>{car.rentPerHour}₪ Rent Per Hour /-</p>
               <div>
-                <button className="btn1"> <Link to={`/booking/${cars._id}`}>Book Now</Link> </button>
+                <button className="btn1"> <Link id='carid' to={`/booking/${car.id}`}>Book Now</Link> </button>
               </div>
 
             </div>
