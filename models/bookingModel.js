@@ -1,14 +1,14 @@
 const mongoose = require("mongoose");
 
 const bookingSchema = new mongoose.Schema({
-
-    car : {type : mongoose.Schema.Types.ObjectId , ref:'Cars'},
     user : {type : mongoose.Schema.Types.ObjectId , ref:'User'},
-    bookedTimeSlots : [{from : {type : String,} , to : {type : String}}],
+    car : {type : mongoose.Schema.Types.ObjectId , ref:'Cars'},
     totalHours : {type : Number},
     totalAmount : {type : Number},
+    driverRequired :{type: Boolean},
+    bookedTimeSlots : [{from : {type : String,} , to : {type : String}}],
     transactionId : {type : String},
-    driverRequired :{type: Boolean}
+    
     
 
 },
