@@ -6,7 +6,7 @@ export const bookCar = (reqObj) => async dispatch => {
     dispatch({ type: 'LOADING', payload: true })
 
     try {
-        await axios.get('/bookings/bookcar')
+        await axios.get('/bookings/bookcar' , reqObj)
         // dispatch({type:'GET_ALL_CARS', payload:response.data})
         dispatch({ type: 'LOADING', payload: false })
         message.success('Your car booked Successfully')

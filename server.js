@@ -12,5 +12,6 @@ console.log(port);
 
 app.use('/api/cars/' ,require('./routes/carsRoute.js'))
 app.use('/api/users/' ,require('./routes/usersRoute.js'))
+app.use('/api/bookings/',require('./routes/bookingsRoute.js'))
 app.get('/',(req,res) => res.send('hello world!'))
 app.listen(port,() => console.log(`Node JS Server started in port ${port}`))  
